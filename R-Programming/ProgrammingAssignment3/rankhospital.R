@@ -30,6 +30,7 @@ rankhospital <- function(state, outcome, num = "best") {
     desired_outcome <- suppressWarnings(
         data.frame(hospital = inputdata$Hospital.Name, 
                    state = inputdata$State, 
+                   ## Read data as numeric.
                    mortality = as.numeric(inputdata[,column.index]))
     )
     

@@ -30,11 +30,7 @@ best <- function(state, outcome) {
     desired_outcome <- suppressWarnings(
         data.frame(hospital = inputdata$Hospital.Name, 
                    state = inputdata$State, 
-                   ## Handling ties. If there is a tie for the best hospital 
-                   ## for a given outcome, then the hospital names are sorted 
-                   ## in alphabetical order and the first hospital in that set 
-                   ## should be chosen (i.e. if hospitals “b”, “c”, and “f” 
-                   ## are tied for best, then hospital “b” should be returned).
+                   ## Read the data as numeric. 
                    mortality = as.numeric(inputdata[,column.index]))
     )
     
